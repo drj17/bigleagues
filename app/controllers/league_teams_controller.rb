@@ -1,9 +1,9 @@
 class LeagueTeamsController < ApplicationController
 
   def create
-    print "TEAM PARAMS"
+    team_params = params.to_h
     print team_params
-    team_params.to_h.each do |team|
+    team_params.each do |team|
       LeagueTeam.create(
         abbrName: team.abbrName,
         cityName: team.cityName,
@@ -14,11 +14,4 @@ class LeagueTeamsController < ApplicationController
     end
   end
 
-  private
-
-  def team_params
-    print "PARAMS"
-    print params
-    params.permit(:leagueTeamInfoList)
-  end
 end
