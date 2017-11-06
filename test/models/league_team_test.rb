@@ -5,7 +5,7 @@
 #  id          :integer          not null, primary key
 #  abbrName    :string
 #  cityName    :string
-#  displayname :string
+#  displayName :string
 #  divName     :string
 #  userName    :string
 #  created_at  :datetime         not null
