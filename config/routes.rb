@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
 
-  post '/import/:platform/:leagueId/leagueteams', to: 'leagueTeams#create'
+  post '/import/:platform/:leagueId/leagueteams', to: 'league_teams#create'
 end
