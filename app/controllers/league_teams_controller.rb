@@ -16,6 +16,6 @@ class LeagueTeamsController < ApplicationController
   private
 
   def team_params
-    params.require(:leagueTeamInfoList).
+    params.require(:leagueTeamInfoList)
   end
 end
