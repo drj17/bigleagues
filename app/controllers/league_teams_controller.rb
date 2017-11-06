@@ -17,6 +17,8 @@ class LeagueTeamsController < ApplicationController
   private
 
   def team_params
+    print "PARAMS"
+    print params
     params.permit(:leagueTeamInfoList)
   end
 end
