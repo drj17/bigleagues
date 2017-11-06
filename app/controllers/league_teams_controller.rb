@@ -1,7 +1,6 @@
 class LeagueTeamsController < ApplicationController
 
   def create
-    print team_params
     team_params.to_h.each do |team|
       LeagueTeam.create(
         abbrName: team.abbrName,
@@ -11,6 +10,7 @@ class LeagueTeamsController < ApplicationController
         userName: team.userName
       )
     end
+    print LeagueTeam.all
   end
 
   private
