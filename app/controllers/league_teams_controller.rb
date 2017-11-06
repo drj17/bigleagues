@@ -1,9 +1,6 @@
 class LeagueTeamsController < ApplicationController
 
   def create
-
-    print "PARAMS"
-    print params[:leagueTeamInfoList]
     params[:leagueTeamInfoList].each do |team|
       team_params = team.permit(
         :abbrName,
@@ -13,8 +10,7 @@ class LeagueTeamsController < ApplicationController
         :username
       )
       team_hash = team_params.to_h
-      print "TEAM_HASH"
-      print team_hash
+
       LeagueTeam.create(
         abbrName: team_hash["abbrName"],
         cityName: team_hash["cityName"],
@@ -23,6 +19,10 @@ class LeagueTeamsController < ApplicationController
         userName: team_hash["userName"]
       )
     end
+  end
+
+  def update
+    print params[:leagueTeamInfoList]
   end
 
 end

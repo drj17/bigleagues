@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   post '/import/:platform/:leagueId/leagueteams', controller: 'league_teams', action: :create
+  post '/import/:platform/:leagueId/standings', controller: 'league_teams', action: :update
 end
