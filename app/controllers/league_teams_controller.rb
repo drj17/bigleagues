@@ -5,7 +5,14 @@ class LeagueTeamsController < ApplicationController
     print "PARAMS"
     print params[:leagueTeamInfoList]
     params[:leagueTeamInfoList].each do |team|
-      team_hash = team.to_h
+      team_params = team.permit(
+        :abbrName,
+        :cityName,
+        :displayName,
+        :divName,
+        :username
+      )
+      team_hash = team_params.to_h
       print "TEAM_HASH"
       print team_hash
       LeagueTeam.create(
