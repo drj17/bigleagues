@@ -1,8 +1,7 @@
 class LeagueTeamsController < ApplicationController
 
   def create
-    print params
-    # print params[:leagueTeamInfoList]
+    print params[:leagueTeamInfoList]
     params[:leagueTeamInfoList].each do |team|
       print team
       LeagueTeam.create(
