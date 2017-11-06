@@ -2,10 +2,9 @@ class LeagueTeamsController < ApplicationController
 
   def create
 
-    team_params = params.to_h
-    print "PRINTING TEAM PARAMS"
-    print team_params
-    team_params.each do |team|
+    print "PARAMS"
+    print   params[:leagueTeamInfoList]
+    params[:leagueTeamInfoList].each do |team|
       LeagueTeam.create(
         abbrName: team.abbrName,
         cityName: team.cityName,
