@@ -25,4 +25,8 @@ class LeagueTeamsController < ApplicationController
     print params[:leagueTeamInfoList]
   end
 
+  def index
+    teams = LeagueTeam.all
+  end
+
 end

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   post '/import/:platform/:leagueId/leagueteams', controller: 'league_teams', action: :create
   post '/import/:platform/:leagueId/standings', controller: 'league_teams', action: :update
+
+  get '/', controller: 'league_teams', action: :index
 end
