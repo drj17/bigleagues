@@ -26,7 +26,7 @@ class LeagueTeamsController < ApplicationController
   end
 
   def index
-    teams = LeagueTeam.all
+    @teams = LeagueTeam.all
   end
 
 end
