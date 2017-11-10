@@ -7,7 +7,7 @@ class LeagueTeamsController < ApplicationController
         :cityName,
         :displayName,
         :divName,
-        :username
+        :userName
       )
       team_hash = team_params.to_h
 
